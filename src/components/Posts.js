@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 
 class Posts extends Component {
     constructor(props) {
@@ -30,7 +29,4 @@ class Posts extends Component {
     }
 }
 
-Posts.proptypes = {
-    posts: PropTypes.array.isRequired
-}
 export default Posts;

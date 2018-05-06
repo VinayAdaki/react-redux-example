@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 
 class Postsform extends Component {
     constructor(props) {
@@ -63,11 +62,6 @@ class Postsform extends Component {
         </div>
         )
     }
-}
-
-Postsform.propTypes = {
-    title: PropTypes.string,
-    body: PropTypes.string
 }
 
 export default Postsform;
