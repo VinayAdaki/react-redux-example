@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 class Postsform extends Component {
     constructor(props) {
@@ -44,7 +45,8 @@ class Postsform extends Component {
                         type="text" 
                         name="title" 
                         onChange={this.onChange} 
-                        value={this.state.title} />
+                        value={this.state.title} 
+                    />
                 </div>
                 <br />
                 <div>
@@ -61,6 +63,11 @@ class Postsform extends Component {
         </div>
         )
     }
+}
+
+Postsform.propTypes = {
+    title: PropTypes.string,
+    body: PropTypes.string
 }
 
 export default Postsform;
