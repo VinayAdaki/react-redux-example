@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Posts from './components/Posts';
-import PostForm from './components/Postform';
+import Posts from './components/posts';
+import PostForm from './components/post-form';
 
-class App extends Component {
-  render() {
+export const App = () => {
     return (
         <div className="App">
           <header className="App-header">
@@ -18,7 +17,4 @@ class App extends Component {
           <Posts />
         </div>
     );
-  }
 }
-
-export default App;
