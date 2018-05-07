@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './app.css';
 import { Provider } from 'react-redux';
 
-import Posts from './components/Posts';
+import Posts from './components/posts';
 import PostForm from './components/Postform';
 
 import store from './store';
