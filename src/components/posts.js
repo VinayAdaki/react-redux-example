@@ -8,6 +8,12 @@ class Posts extends Component {
         this.props.fetchPosts();
     }
 
+    componentWillReceiveProps(nextPost) {
+        if(nextPost.newPost){
+            this.props.posts.unshift(nextPost.newPost);
+        }
+    }
+
     render() {
         const postItems = this.props.posts.map(post => (
             <div key={post.id}>
@@ -17,10 +23,10 @@ class Posts extends Component {
         ));
 
         return (
-            <div>
-                <h1>Posts</h1>
-                { postItems }
-            </div>
+        <div>
+            <h1>Posts</h1>
+            { postItems }
+        </div>
         )
     }
 }
