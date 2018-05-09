@@ -32,5 +32,10 @@ const mapStateToProps = state => ({
 Posts.propTypes = {
     fetchPosts: PropTypes.func.isRequired,
     posts: PropTypes.array.isRequired,
+    newPost: PropTypes.shape({
+        id: PropTypes.string,
+        title: PropTypes.string,
+        body: PropTypes.string
+    })
 }
 export default connect(mapStateToProps, {fetchPosts})(Posts);
