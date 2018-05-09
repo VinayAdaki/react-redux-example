@@ -1,20 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './app.css';
+import {Provider} from 'react-redux';
 
 import Posts from './components/posts';
-import PostForm from './components/post-form';
+import Postform from './components/post-form';
+
+import store from './store';
 
 export const App = () => {
     return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <PostForm />
-          <hr />
-          <Posts />
-        </div>
+        <Provider store={store}>
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h1 className="App-title">Welcome to React</h1>
+                </header>
+                <Postform/>
+                <hr/>
+                <Posts/>
+            </div>
+        </Provider>
     );
 }
