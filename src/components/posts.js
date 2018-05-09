@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/postActions';
+import {connect} from 'react-redux';
+import {fetchPosts} from '../actions/postActions';
 
 class Posts extends Component {
     componentWillMount() {
@@ -19,15 +19,14 @@ class Posts extends Component {
         return (
             <div>
                 <h1>Posts</h1>
-                { postItems }
+                {postItems}
             </div>
         )
     }
 }
 
 const mapStateToProps = state => ({
-    posts: state.posts.items,
-    newPost: state.posts.item
+    posts: state.posts.items
 });
 
 Posts.propTypes = {
@@ -39,4 +38,4 @@ Posts.propTypes = {
         body: PropTypes.string
     })
 }
-export default connect(mapStateToProps, { fetchPosts })(Posts);
+export default connect(mapStateToProps, {fetchPosts})(Posts);
